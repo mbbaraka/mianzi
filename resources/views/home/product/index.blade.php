@@ -194,9 +194,9 @@
                   <div class="product-tabs">
                      <div class="product-tabs__list">
                         <a href="#tab-description" class="product-tabs__item product-tabs__item--active">Description</a> <a href="#tab-specification" class="product-tabs__item">Specification</a> 
-                        @if(Auth::guard('customer')->check())                        
+                        {{-- @if(Auth::guard('customer')->check())                         --}}
                         <a href="#tab-reviews" class="product-tabs__item">Reviews</a>
-                        @endif
+                        {{-- @endif --}}
                      </div>
                      <div class="product-tabs__content">
                         <div class="product-tabs__pane product-tabs__pane--active" id="tab-description">
@@ -256,6 +256,7 @@
                                     @endif
                                  </div>
                               </div>
+                              @if(Auth::guard('customer')->check())
                               <form class="reviews-view__form" method="post" action="{{ route('review.add') }}">
                               	@csrf
                                  <h3 class="reviews-view__header">Write A Review</h3>
@@ -284,6 +285,10 @@
                                     </div>
                                  </div>
                               </form>
+                              @else
+                                 <hr>
+                                 <p class="reviews-view__header"><a href="{{ route('login.html') }}">Login</a> to write a review</p>
+                              @endif
                            </div>
                         </div>
                      </div>

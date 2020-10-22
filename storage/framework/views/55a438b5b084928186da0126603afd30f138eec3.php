@@ -192,9 +192,9 @@
                   <div class="product-tabs">
                      <div class="product-tabs__list">
                         <a href="#tab-description" class="product-tabs__item product-tabs__item--active">Description</a> <a href="#tab-specification" class="product-tabs__item">Specification</a> 
-                        <?php if(Auth::guard('customer')->check()): ?>                        
+                        
                         <a href="#tab-reviews" class="product-tabs__item">Reviews</a>
-                        <?php endif; ?>
+                        
                      </div>
                      <div class="product-tabs__content">
                         <div class="product-tabs__pane product-tabs__pane--active" id="tab-description">
@@ -258,6 +258,7 @@
                                     <?php endif; ?>
                                  </div>
                               </div>
+                              <?php if(Auth::guard('customer')->check()): ?>
                               <form class="reviews-view__form" method="post" action="<?php echo e(route('review.add')); ?>">
                               	<?php echo csrf_field(); ?>
                                  <h3 class="reviews-view__header">Write A Review</h3>
@@ -300,6 +301,10 @@ unset($__errorArgs, $__bag); ?>
                                     </div>
                                  </div>
                               </form>
+                              <?php else: ?>
+                                 <hr>
+                                 <p class="reviews-view__header"><a href="<?php echo e(route('login.html')); ?>">Login</a> to write a review</p>
+                              <?php endif; ?>
                            </div>
                         </div>
                      </div>
