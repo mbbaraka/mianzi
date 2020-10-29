@@ -44,7 +44,7 @@
 	                		<td><a target="_blank" href="{{ url($products->slug.'.html') }}" >{{ $products->title }}</a></td>
 	                		<td>
 	                			<a target="_blank" href="{{ url('storage/product/'.$products->cover) }}">
-	                				<img style="height: 100px; width: 150px;" class="img-fluid" src="{{ asset('storage/product/'.$products->cover) }}">
+	                				<img style="height: 100px; width: 150px;" class="img-fluid" src="{{ URL('storage/product/'.$products->cover) }}">
 	                			</a>
 	                		</td>
 	                		<td>{{ number_format($products->price) }}</td>
