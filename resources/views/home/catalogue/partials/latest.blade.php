@@ -4,7 +4,7 @@
       <div class="widget-products__list">
          @foreach(Products::get('latest', 5) as $latest)
          <div class="widget-products__item">
-            <div class="widget-products__image"><a href="{{ url($latest->slug.'.html') }}"><img style="width: 50px; height: 50px" src="{{ asset('storage/product/'.$latest->cover) }}" alt="{{ $latest->title }}"></a></div>
+            <div class="widget-products__image"><a href="{{ url($latest->slug.'.html') }}"><img style="width: 50px; height: 50px" src="{{ asset('app/product/'.$latest->cover) }}" alt="{{ $latest->title }}"></a></div>
             <div class="widget-products__info">
                <div class="widget-products__name"><a href="{{ url($latest->slug.'.html') }}">{{ $latest->title }}</a></div>
                <div class="widget-products__prices">

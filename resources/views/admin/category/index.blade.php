@@ -40,8 +40,8 @@
 	                		<td>{{ $key + 1 }}</td>
 	                		<td><a href="{{ route('subcategories.index', [$categories->title, $categories->id]) }}" >{{ $categories->title }}</a></td>
 	                		<td>
-	                			<a target="_blank" href="{{ url('storage/category/'.$categories->image_url) }}">
-	                				<img style="height: 100px; width: 150px;" class="img-fluid" src="{{ asset('storage/category/'.$categories->thumbnail) }}">
+	                			<a target="_blank" href="{{ url('app/category/'.$categories->image_url) }}">
+	                				<img style="height: 100px; width: 150px;" class="img-fluid" src="{{ asset('app/category/'.$categories->thumbnail) }}">
 	                			</a>
 	                		</td>
 	                		<td>

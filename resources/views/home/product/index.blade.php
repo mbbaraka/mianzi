@@ -38,7 +38,7 @@
                                  <div class="owl-carousel" id="product-image"> 
                                  	@foreach($image as $images)                                	
                                  	<a href="images/products/product-16.html" target="_blank">
-                                 		<img style="width: 491px; height: 491px" src="{{ asset('storage/product/gallery/'.$images->image) }}" alt=""> 
+                                 		<img style="width: 491px; height: 491px" src="{{ asset('app/product/gallery/'.$images->image) }}" alt=""> 
                                  	</a>
                                  	@endforeach
                                  </div>
@@ -47,7 +47,7 @@
                                  <div class="owl-carousel" id="product-carousel">
                                  	@foreach($image as $images)
                                  	<a href="#" class="product-gallery__carousel-item">
-                                 		<img style="width: 75px; height: 75px;" class="product-gallery__carousel-image" src="{{ asset('storage/product/gallery/'.$images->image) }}" alt=""> 
+                                 		<img style="width: 75px; height: 75px;" class="product-gallery__carousel-image" src="{{ asset('app/product/gallery/'.$images->image) }}" alt=""> 
                                  	</a>
                                  	@endforeach
                                  </div>

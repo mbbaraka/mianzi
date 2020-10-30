@@ -11,7 +11,7 @@
       	@foreach(Categories::getRoot() as $categories)
          <div class="block-categories__item category-card category-card--layout--classic">
             <div class="category-card__body">
-               <div class="category-card__image"><a href="{{ url('category/'.$categories->slug. '.html') }}"><img style="width: 130px; height: 130px;" src="{{ asset('storage/category/'.$categories->thumbnail) }}" alt="{{ $categories->title }}"></a></div>
+               <div class="category-card__image"><a href="{{ url('category/'.$categories->slug. '.html') }}"><img style="width: 130px; height: 130px;" src="{{ asset('app/category/'.$categories->thumbnail) }}" alt="{{ $categories->title }}"></a></div>
                <div class="category-card__content">
                   <div class="category-card__name"><a href="{{ url('category/'.$categories->slug. '.html') }}">{{ $categories->title }}</a></div>
                   <ul class="category-card__links">

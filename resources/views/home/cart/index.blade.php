@@ -46,7 +46,7 @@
                         <form method="post" action="{{ route('cart.update', $carts->id) }}">
                         @csrf                   	
                         <tr class="cart-table__row">
-                           <td class="cart-table__column cart-table__column--image"><a href="{{ url($carts->slug.'.html') }}"><img src="{{ asset('storage/product/'. $carts->product->cover) }}" alt="{{$carts->product->title }}"></a></td>
+                           <td class="cart-table__column cart-table__column--image"><a href="{{ url($carts->slug.'.html') }}"><img src="{{ asset('app/product/'. $carts->product->cover) }}" alt="{{$carts->product->title }}"></a></td>
                            <td class="cart-table__column cart-table__column--product">
                               <a href="{{ url($carts->product->slug.'.html') }}" class="cart-table__product-name">{{ $carts->product->title }}</a>
                            </td>

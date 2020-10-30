@@ -38,7 +38,7 @@
 	                                       </div>
 	                                    @endif
 	                                 </div>
-	                                 <div class="product-card__image"><a href="{{ url($product->slug.'.html') }}"><img style="width: 228.5px; height: 228.5px;" src="{{ asset('storage/product/'.$product->cover) }}" alt="{{ $product->title }}"></a></div>
+	                                 <div class="product-card__image"><a href="{{ url($product->slug.'.html') }}"><img style="width: 228.5px; height: 228.5px;" src="{{ asset('app/product/'.$product->cover) }}" alt="{{ $product->title }}"></a></div>
 	                                 <div class="product-card__info">
 	                                    <div class="product-card__name"><a href="{{ url($product->slug.'.html') }}">{{ $product->title }}</a></div>
 	                                    <div class="product-card__rating">

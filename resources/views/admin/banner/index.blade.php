@@ -48,7 +48,7 @@
 	                		<td>{{ $banners->status }}</td>
 	                		<td>{{ $banners->type }}</td>
 	                		<td>
-	                			<img src="{{ asset('storage/banner/'. $banners->image) }}" style="width: 200px; height: 120px;">
+	                			<img src="{{ asset('app/banner/'. $banners->image) }}" style="width: 200px; height: 120px;">
 	                		</td>
 	                		<td>
 			              		<form action="{{ route('banners.destroy', $banners->id) }}" method="post">

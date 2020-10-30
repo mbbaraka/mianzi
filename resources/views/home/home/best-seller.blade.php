@@ -24,7 +24,7 @@
                                     </div>
                                  @endif
                               </div>
-                              <div class="product-card__image"><a href="product.html"><img style="width: 347px; height: 347px;" src="{{ asset('storage/product/'.$product->cover) }}" alt=""></a></div>
+                              <div class="product-card__image"><a href="product.html"><img style="width: 347px; height: 347px;" src="{{ asset('app/product/'.$product->cover) }}" alt=""></a></div>
                               <div class="product-card__info">
                                  <div class="product-card__name"><a href="product.html">{{$product->title}}</a></div>
                                  <div class="product-card__rating">

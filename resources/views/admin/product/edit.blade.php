@@ -206,7 +206,7 @@
 	                  </div>
 	                </div> --}}
 	                <div class="">
-	                	<img style="height: 150px; width: 120px" class="img-fluid" src="{{ asset('storage/product/'.$product->cover) }}">
+	                	<img style="height: 150px; width: 120px" class="img-fluid" src="{{ asset('app/product/'.$product->cover) }}">
 	                </div>
 	                <div class="form-group">
 	                  <label class="control-label">Cover Image</label>
@@ -218,7 +218,7 @@
 	                <div class="row">
 	                	@foreach($image as $images)
 	                	<div class="col-md-2">
-	                		<img style="height: 128px;" class="img-fluid" src="{{ asset('storage/product/gallery/'.$images->image) }}">
+	                		<img style="height: 128px;" class="img-fluid" src="{{ asset('app/product/gallery/'.$images->image) }}">
 	                		<a onclick="confirm('Are you sure?')" href="{{ route('image.remove', $images->id) }}" class="btn btn-danger btn-block">Remove?</a>
 	                	</div>
 	                	@endforeach
