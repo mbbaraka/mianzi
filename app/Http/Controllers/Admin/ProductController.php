@@ -68,7 +68,7 @@ class ProductController extends Controller
                 $imagename =  $curentdate . '-' . uniqid() . '.' . $file->getClientOriginalExtension();
                 
               
-                $file->move(storage_path('app\public\product'), $imagename);
+                $file->move(public_path('app\public\product'), $imagename);
          }else{
           $imagename = "default.png";
          }
@@ -113,7 +113,7 @@ class ProductController extends Controller
                 $curentdate = Carbon::now()->toDateString();
                 $imagenames = $product->subtitle . '-' . uniqid() . '.' . $image->getClientOriginalExtension();
 
-                $image->move(storage_path('app\public\product\gallery'), $imagenames);
+                $image->move(public_path('app\public\product\gallery'), $imagenames);
 
                 $product_image = new Productimage();
                 $product_image->product_id = $product->id;
@@ -192,7 +192,7 @@ class ProductController extends Controller
                       if (file_exists('storage/product/'.$product->cover)) {
                         unlink('storage/product/'.$product->cover);
                       }
-                      $file->move(storage_path('app\public\product'), $imagename);
+                      $file->move(public_path('app\public\product'), $imagename);
                }
         }else{
             $imagename = $product->cover;
@@ -229,7 +229,7 @@ class ProductController extends Controller
                     $curentdate = Carbon::now()->toDateString();
                     $imagenames = $product->subtitle . '-' . uniqid() . '.' . $image->getClientOriginalExtension();
 
-                    $image->move(storage_path('app\public\product\gallery'), $imagenames);
+                    $image->move(public_path('app\public\product\gallery'), $imagenames);
 
                     $product_image = new Productimage();
                     $product_image->product_id = $product->id;
