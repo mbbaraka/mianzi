@@ -125,11 +125,11 @@ class BannerController extends Controller
              if (isset($file)) {
                $curentdate = Carbon::now()->toDateString();
                     $imagename =  $curentdate . '-' . uniqid() . '.' . $file->getClientOriginalExtension();
-                    if (file_exists('storage/banner/'.$banner->image)) {
-                            unlink('storage/banner/'.$banner->image);
+                    if (file_exists('app/banner/'.$banner->image)) {
+                            unlink('app/banner/'.$banner->image);
                           }
                   
-                    $file->move(storage_path('app\public\banner'), $imagename);
+                    $file->move(public_path('/app/banner'), $imagename);
              }else{
               $imagename = "default.png";
              }
@@ -164,8 +164,8 @@ class BannerController extends Controller
         $delete = $banner->delete();
 
         if ($delete) {
-            if (file_exists('storage/banner/'.$banner->image)) {
-                unlink('storage/banner/'.$banner->image);
+            if (file_exists('app/banner/'.$banner->image)) {
+                unlink('app/banner/'.$banner->image);
             } 
             toast('Banner deleted Successfully', 'success');
             return redirect()->back();

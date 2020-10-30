@@ -189,8 +189,8 @@ class ProductController extends Controller
                  $curentdate = Carbon::now()->toDateString();
                       $imagename =  $curentdate . '-' . uniqid() . '.' . $file->getClientOriginalExtension();
                       
-                      if (file_exists('storage/product/'.$product->cover)) {
-                        unlink('storage/product/'.$product->cover);
+                      if (file_exists('app/product/'.$product->cover)) {
+                        unlink('app/product/'.$product->cover);
                       }
                       $file->move(public_path().'/app/product/', $imagename);
                }
@@ -229,7 +229,7 @@ class ProductController extends Controller
                     $curentdate = Carbon::now()->toDateString();
                     $imagenames = $product->subtitle . '-' . uniqid() . '.' . $image->getClientOriginalExtension();
 
-                    $image->move(public_path('app\public\product\gallery'), $imagenames);
+                    $image->move(public_path('app\product\gallery'), $imagenames);
 
                     $product_image = new Productimage();
                     $product_image->product_id = $product->id;
@@ -255,8 +255,8 @@ class ProductController extends Controller
         $delete = $product->delete();
 
         if ($delete) {
-            if (file_exists('storage/product/'.$product->cover)) {
-                unlink('storage/product/'.$product->cover);
+            if (file_exists('app/product/'.$product->cover)) {
+                unlink('app/product/'.$product->cover);
             } 
             toast('Product deleted Successfully', 'success');
             return redirect()->back();
@@ -274,8 +274,8 @@ class ProductController extends Controller
         $image = ProductImage::findOrFail($id);
         $delete = $image->delete();
         if ($delete) {
-            if (file_exists('storage/product/gallery/'.$image->image)) {
-                unlink('storage/product/gallery/'.$image->image);
+            if (file_exists('app/product/gallery/'.$image->image)) {
+                unlink('app/product/gallery/'.$image->image);
             }
             toast('Image deleted Successfully', 'success');
             return redirect()->back();

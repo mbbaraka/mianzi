@@ -51,7 +51,7 @@ class CategoryController extends Controller
            $curentdate = Carbon::now()->toDateString();
                 $imagename =  $curentdate . '-' . uniqid() . '.' . $file->getClientOriginalExtension();
                
-                $file->move(storage_path('app\public\category'), $imagename);
+                $file->move(public_path('/app/category'), $imagename);
          }else{
           $imagename = "default.png";
          }
@@ -111,7 +111,7 @@ class CategoryController extends Controller
                $curentdate = Carbon::now()->toDateString();
                     $imagename =  $curentdate . '-' . uniqid() . '.' . $file->getClientOriginalExtension();
 
-                    $file->move(storage_path('app\public\category'), $imagename);
+                    $file->move(public_path('/app/category'), $imagename);
              }else{
               $imagename = "default.png";
              }
@@ -143,8 +143,8 @@ class CategoryController extends Controller
         $category = Category::findOrFail($id);
         if ($category->delete()) {
           
-            if (file_exists('category/'.$category->thumbnail)) {
-                unlink('category/'.$category->thumbnail);
+            if (file_exists('app/category/'.$category->thumbnail)) {
+                unlink('app/category/'.$category->thumbnail);
                 toast("category was deleted successfully", 'success');
                 return redirect()->back();
             }else{
@@ -183,7 +183,7 @@ class CategoryController extends Controller
            $curentdate = Carbon::now()->toDateString();
                 $imagename =  $curentdate . '-' . uniqid() . '.' . $file->getClientOriginalExtension();
                
-                $file->move(storage_path('app\public\category'), $imagename);
+                $file->move(public_path('/app/category'), $imagename);
          }else{
           $imagename = "default.png";
          }
