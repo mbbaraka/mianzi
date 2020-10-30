@@ -192,7 +192,7 @@ class ProductController extends Controller
                       if (file_exists('storage/product/'.$product->cover)) {
                         unlink('storage/product/'.$product->cover);
                       }
-                      $file->move(public_path('app\public\product'), $imagename);
+                      $file->move(public_path().'app/product/', $imagename);
                }
         }else{
             $imagename = $product->cover;
