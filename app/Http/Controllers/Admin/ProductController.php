@@ -68,7 +68,7 @@ class ProductController extends Controller
                 $imagename =  $curentdate . '-' . uniqid() . '.' . $file->getClientOriginalExtension();
                 
               
-                $file->move(storage_path('app\public\product'), $imagename);
+                $file->move(public_path().'/product', $imagename);
          }else{
           $imagename = "default.png";
          }
@@ -192,7 +192,7 @@ class ProductController extends Controller
                       if (file_exists('storage/product/'.$product->cover)) {
                         unlink('storage/product/'.$product->cover);
                       }
-                      $file->move(storage_path('app\public\product'), $imagename);
+                      $file->move(public_path().'/product', $imagename);
                }
         }else{
             $imagename = $product->cover;
