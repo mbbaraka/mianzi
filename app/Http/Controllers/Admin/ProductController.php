@@ -229,7 +229,7 @@ class ProductController extends Controller
                     $curentdate = Carbon::now()->toDateString();
                     $imagenames = $product->subtitle . '-' . uniqid() . '.' . $image->getClientOriginalExtension();
 
-                    $image->move(public_path('app\product\gallery'), $imagenames);
+                    $image->move(public_path('app/product/gallery'), $imagenames);
 
                     $product_image = new Productimage();
                     $product_image->product_id = $product->id;
