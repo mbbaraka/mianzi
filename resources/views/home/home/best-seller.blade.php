@@ -96,7 +96,7 @@
                                     </div>
                                  @endif
                               </div>
-                              <div class="product-card__image"><a href="{{ url($product->slug.'.html') }}"><img style="width: 192px; height: 192px;" src="{{ asset('storage/product/'.$product->cover) }}" alt="{{ $product->title }}"></a></div>
+                              <div class="product-card__image"><a href="{{ url($product->slug.'.html') }}"><img style="width: 192px; height: 192px;" src="{{ asset('app/product/'.$product->cover) }}" alt="{{ $product->title }}"></a></div>
                               <div class="product-card__info">
                                  <div class="product-card__name"><a href="{{ url($product->slug.'.html') }}">{{ Str::limit($product->title, 30 , '...') }}</a></div>
                                  <div class="product-card__rating">
