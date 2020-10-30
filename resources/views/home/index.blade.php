@@ -13,8 +13,8 @@
                   <div class="owl-carousel">
                   	@foreach(Banners::get('slider') as $sliders)
                      <a class="block-slideshow__slide" href="#">
-                        <div class="block-slideshow__slide-image block-slideshow__slide-image--desktop" style="background-image: url({{ asset('storage/banner/'.$sliders->image)}}"></div>
-                        <div class="block-slideshow__slide-image block-slideshow__slide-image--mobile" style="background-image: url({{ asset('storage/banner/'.$sliders->image)}}"></div>
+                        <div class="block-slideshow__slide-image block-slideshow__slide-image--desktop" style="background-image: url({{ asset('app/banner/'.$sliders->image)}}"></div>
+                        <div class="block-slideshow__slide-image block-slideshow__slide-image--mobile" style="background-image: url({{ asset('app/banner/'.$sliders->image)}}"></div>
                         <div class="block-slideshow__slide-content">
                            <div class="block-slideshow__slide-title">{{ $sliders->title}}<br>
                            	{{ $sliders->sub_title}}</div>
