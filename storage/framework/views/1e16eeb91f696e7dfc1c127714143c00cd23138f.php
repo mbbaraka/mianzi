@@ -11,7 +11,7 @@
       	<?php $__currentLoopData = Categories::getRoot(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $categories): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
          <div class="block-categories__item category-card category-card--layout--classic">
             <div class="category-card__body">
-               <div class="category-card__image"><a href="<?php echo e(url('category/'.$categories->slug. '.html')); ?>"><img style="width: 130px; height: 130px;" src="<?php echo e(asset('storage/category/'.$categories->thumbnail)); ?>" alt="<?php echo e($categories->title); ?>"></a></div>
+               <div class="category-card__image"><a href="<?php echo e(url('category/'.$categories->slug. '.html')); ?>"><img style="width: 130px; height: 130px;" src="<?php echo e(asset('app/category/'.$categories->thumbnail)); ?>" alt="<?php echo e($categories->title); ?>"></a></div>
                <div class="category-card__content">
                   <div class="category-card__name"><a href="<?php echo e(url('category/'.$categories->slug. '.html')); ?>"><?php echo e($categories->title); ?></a></div>
                   <ul class="category-card__links">

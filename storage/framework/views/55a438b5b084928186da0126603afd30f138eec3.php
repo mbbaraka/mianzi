@@ -38,7 +38,7 @@
                                  <div class="owl-carousel" id="product-image"> 
                                  	<?php $__currentLoopData = $image; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $images): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>                                	
                                  	<a href="images/products/product-16.html" target="_blank">
-                                 		<img style="width: 491px; height: 491px" src="<?php echo e(asset('storage/product/gallery/'.$images->image)); ?>" alt=""> 
+                                 		<img style="width: 491px; height: 491px" src="<?php echo e(asset('app/product/gallery/'.$images->image)); ?>" alt=""> 
                                  	</a>
                                  	<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                  </div>
@@ -47,7 +47,7 @@
                                  <div class="owl-carousel" id="product-carousel">
                                  	<?php $__currentLoopData = $image; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $images): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                  	<a href="#" class="product-gallery__carousel-item">
-                                 		<img style="width: 75px; height: 75px;" class="product-gallery__carousel-image" src="<?php echo e(asset('storage/product/gallery/'.$images->image)); ?>" alt=""> 
+                                 		<img style="width: 75px; height: 75px;" class="product-gallery__carousel-image" src="<?php echo e(asset('app/product/gallery/'.$images->image)); ?>" alt=""> 
                                  	</a>
                                  	<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                  </div>

@@ -43,8 +43,8 @@
 	                		<td><?php echo e($key + 1); ?></td>
 	                		<td><a target="_blank" href="<?php echo e(url($products->slug.'.html')); ?>" ><?php echo e($products->title); ?></a></td>
 	                		<td>
-	                			<a target="_blank" href="<?php echo e(url('storage/product/'.$products->cover)); ?>">
-	                				<img style="height: 100px; width: 150px;" class="img-fluid" src="<?php echo e(URL('storage/product/'.$products->cover)); ?>">
+	                			<a target="_blank" href="<?php echo e(url('/app/product/'.$products->cover)); ?>">
+	                				<img style="height: 100px; width: 150px;" class="img-fluid" src="<?php echo e(asset('/app/product/'.$products->cover)); ?>">
 	                			</a>
 	                		</td>
 	                		<td><?php echo e(number_format($products->price)); ?></td>

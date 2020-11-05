@@ -34,7 +34,7 @@
                                        </div>
                                     <?php endif; ?>
                                     </div>
-                                    <div class="product-card__image"><a href="<?php echo e(url($products->slug.'.html')); ?>"><img style="width: 180px; height: 180px;" src="<?php echo e(asset('storage/product/'.$products->cover)); ?>" alt="<?php echo e($products->title); ?>"></a></div>
+                                    <div class="product-card__image"><a href="<?php echo e(url($products->slug.'.html')); ?>"><img style="width: 180px; height: 180px;" src="<?php echo e(asset('app/product/'.$products->cover)); ?>" alt="<?php echo e($products->title); ?>"></a></div>
                                     <div class="product-card__info">
                                        <div class="product-card__name"><a href="<?php echo e(url($products->slug.'.html')); ?>"><?php echo e($products->title); ?></a></div>
                                        <div class="product-card__rating">

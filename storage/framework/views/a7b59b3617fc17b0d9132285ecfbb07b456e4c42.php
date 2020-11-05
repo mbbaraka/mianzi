@@ -116,7 +116,7 @@
                                        <div class="dropcart__products-list">
                                           <?php $__currentLoopData = Carts::get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $carts): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                           <div class="dropcart__product">
-                                             <div class="dropcart__product-image"><a href="product.html"><img style="width: 70px; height: 70px;" src="<?php echo e(asset('storage/product/'.$carts->product->cover)); ?>" alt="<?php echo e($carts->product->title); ?>"></a>
+                                             <div class="dropcart__product-image"><a href="product.html"><img style="width: 70px; height: 70px;" src="<?php echo e(asset('app/product/'.$carts->product->cover)); ?>" alt="<?php echo e($carts->product->title); ?>"></a>
                                              </div>
                                              <div class="dropcart__product-info">
                                                 <div class="dropcart__product-name"><a href="<?php echo e(url($carts->product->slug. '.html')); ?>"><?php echo e($carts->product->title); ?></a></div>
@@ -165,7 +165,7 @@
                                        <div class="dropcart__products-list">
                                           <?php $__currentLoopData = ShoppingCart::all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $carts): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                           <div class="dropcart__product">
-                                             <div class="dropcart__product-image"><a href="product.html"><img style="width: 70px; height: 70px;" src="<?php echo e(asset('storage/product/'.$carts->cover)); ?>" alt=""></a></div>
+                                             <div class="dropcart__product-image"><a href="product.html"><img style="width: 70px; height: 70px;" src="<?php echo e(asset('app/product/'.$carts->cover)); ?>" alt=""></a></div>
                                              <div class="dropcart__product-info">
                                                 <div class="dropcart__product-name"><a href="product.html"><?php echo e($carts->name); ?></a></div>
                                                 <div class="dropcart__product-meta"><span class="dropcart__product-quantity"><?php echo e($carts->qty); ?></span> x <span class="dropcart__product-price"><?php echo e(config('shop.symbol').' '. number_format($carts->price)); ?></span></div>

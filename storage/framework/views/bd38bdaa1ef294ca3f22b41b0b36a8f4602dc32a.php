@@ -96,7 +96,7 @@ $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>"
-			                    type="text"
+			                    type="number"
 			                    name="price"
 			                    value="<?php echo e(old('price')); ?>"
 			                    placeholder="UGX ..."
@@ -125,7 +125,7 @@ $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>"
-			                    type="text"
+			                    type="number"
 			                    name="sale_price"
 			                    value="<?php echo e(old('sale_price')); ?>"
 			                    placeholder="UGX ...."

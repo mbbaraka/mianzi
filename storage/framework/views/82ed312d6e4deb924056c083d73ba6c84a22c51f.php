@@ -23,7 +23,7 @@
                                     </div>
                                  <?php endif; ?>
                               </div>
-                              <div class="product-card__image"><a href="product.html"><img style="width: 347px; height: 347px;" src="<?php echo e(asset('storage/product/'.$product->cover)); ?>" alt=""></a></div>
+                              <div class="product-card__image"><a href="product.html"><img style="width: 347px; height: 347px;" src="<?php echo e(asset('app/product/'.$product->cover)); ?>" alt=""></a></div>
                               <div class="product-card__info">
                                  <div class="product-card__name"><a href="product.html"><?php echo e($product->title); ?></a></div>
                                  <div class="product-card__rating">
@@ -95,7 +95,7 @@
                                     </div>
                                  <?php endif; ?>
                               </div>
-                              <div class="product-card__image"><a href="<?php echo e(url($product->slug.'.html')); ?>"><img style="width: 192px; height: 192px;" src="<?php echo e(asset('storage/product/'.$product->cover)); ?>" alt="<?php echo e($product->title); ?>"></a></div>
+                              <div class="product-card__image"><a href="<?php echo e(url($product->slug.'.html')); ?>"><img style="width: 192px; height: 192px;" src="<?php echo e(asset('app/product/'.$product->cover)); ?>" alt="<?php echo e($product->title); ?>"></a></div>
                               <div class="product-card__info">
                                  <div class="product-card__name"><a href="<?php echo e(url($product->slug.'.html')); ?>"><?php echo e(Str::limit($product->title, 30 , '...')); ?></a></div>
                                  <div class="product-card__rating">

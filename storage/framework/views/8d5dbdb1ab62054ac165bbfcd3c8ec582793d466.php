@@ -4,7 +4,7 @@
       <div class="widget-products__list">
          <?php $__currentLoopData = Products::get('latest', 5); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $latest): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
          <div class="widget-products__item">
-            <div class="widget-products__image"><a href="<?php echo e(url($latest->slug.'.html')); ?>"><img style="width: 50px; height: 50px" src="<?php echo e(asset('storage/product/'.$latest->cover)); ?>" alt="<?php echo e($latest->title); ?>"></a></div>
+            <div class="widget-products__image"><a href="<?php echo e(url($latest->slug.'.html')); ?>"><img style="width: 50px; height: 50px" src="<?php echo e(asset('app/product/'.$latest->cover)); ?>" alt="<?php echo e($latest->title); ?>"></a></div>
             <div class="widget-products__info">
                <div class="widget-products__name"><a href="<?php echo e(url($latest->slug.'.html')); ?>"><?php echo e($latest->title); ?></a></div>
                <div class="widget-products__prices">

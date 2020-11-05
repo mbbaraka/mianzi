@@ -12,7 +12,7 @@
                            <div class="product-gallery">
                               <div class="">                 
                                  <a href="<?php echo e(asset('storage/product/'.$product->cover)); ?>" target="_blank">
-                                    <img style="width: 360px; height: 400px" src="<?php echo e(asset('storage/product/'.$product->cover)); ?>" alt=""> 
+                                    <img style="width: 360px; height: 400px" src="<?php echo e(asset('app/product/'.$product->cover)); ?>" alt=""> 
                                  </a>
                               </div>
                            </div>

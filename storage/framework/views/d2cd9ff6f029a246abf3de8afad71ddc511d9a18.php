@@ -78,7 +78,7 @@ unset($__errorArgs, $__bag); ?>" id="footer-newsletter-address" placeholder="Ema
                   </div>
                   <div class="site-footer__bottom">
                      <div class="site-footer__copyright"><a target="" href="https://www.mianzi.co.ug">Mianzi</a></div>
-                     <div class="site-footer__payments"><img src="<?php echo e(asset('frontend/stroyka/images/payments.png')); ?>" alt=""></div>
+                     <div class="site-footer__payments"><img style="width: 150px; height: 48px;" src="<?php echo e(asset('app/mtn-airtel.jpg')); ?>" alt=""></div>
                   </div>
                </div>
             </div>

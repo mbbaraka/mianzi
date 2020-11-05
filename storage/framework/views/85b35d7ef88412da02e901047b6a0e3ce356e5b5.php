@@ -13,8 +13,8 @@
                   <div class="owl-carousel">
                   	<?php $__currentLoopData = Banners::get('slider'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $sliders): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                      <a class="block-slideshow__slide" href="#">
-                        <div class="block-slideshow__slide-image block-slideshow__slide-image--desktop" style="background-image: url(<?php echo e(asset('storage/banner/'.$sliders->image)); ?>"></div>
-                        <div class="block-slideshow__slide-image block-slideshow__slide-image--mobile" style="background-image: url(<?php echo e(asset('storage/banner/'.$sliders->image)); ?>"></div>
+                        <div class="block-slideshow__slide-image block-slideshow__slide-image--desktop" style="background-image: url(<?php echo e(asset('app/banner/'.$sliders->image)); ?>"></div>
+                        <div class="block-slideshow__slide-image block-slideshow__slide-image--mobile" style="background-image: url(<?php echo e(asset('app/banner/'.$sliders->image)); ?>"></div>
                         <div class="block-slideshow__slide-content">
                            <div class="block-slideshow__slide-title"><?php echo e($sliders->title); ?><br>
                            	<?php echo e($sliders->sub_title); ?></div>
