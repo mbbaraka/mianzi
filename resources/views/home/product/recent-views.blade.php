@@ -98,7 +98,7 @@
                                        </div>
                                     @endif
                                     </div>
-                                    <div class="product-card__image"><a href="{{ url($product->product->slug.'.html') }}"><img style="width: 180px; height: 180px;" src="{{ asset('storage/product/'.$product->product->cover) }}" alt="{{ $product->product->title }}"></a></div>
+                                    <div class="product-card__image"><a href="{{ url($product->product->slug.'.html') }}"><img style="width: 180px; height: 180px;" src="{{ asset('app/product/'.$product->product->cover) }}" alt="{{ $product->product->title }}"></a></div>
                                     <div class="product-card__info">
                                        <div class="product-card__name"><a href="{{ url($product->product->slug.'.html') }}">{{ $product->product->title }}</a></div>
                                        <div class="product-card__rating">
