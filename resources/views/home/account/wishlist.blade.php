@@ -46,7 +46,7 @@
                      <tbody class="wishlist__body">
                      	@foreach($wishlist as $wishlists)
                         <tr class="wishlist__row">
-                           <td class="wishlist__column wishlist__column--image"><a href="#"><img src="{{ asset('storage/product/'.$wishlists->product->cover) }}" alt=""></a></td>
+                           <td class="wishlist__column wishlist__column--image"><a href="#"><img src="{{ asset('app/product/'.$wishlists->product->cover) }}" alt=""></a></td>
                            <td class="wishlist__column wishlist__column--product">
                               <a href="{{ url($wishlists->product->slug. '.html') }}" class="wishlist__product-name">{{ $wishlists->product->title}}</a>
                               <div class="wishlist__product-rating">

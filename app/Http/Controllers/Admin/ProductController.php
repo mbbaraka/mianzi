@@ -68,7 +68,7 @@ class ProductController extends Controller
                 $imagename =  $curentdate . '-' . uniqid() . '.' . $file->getClientOriginalExtension();
                 
               
-                $file->move(public_path('app/public/product'), $imagename);
+                $file->move(public_path('app/product'), $imagename);
          }else{
           $imagename = "default.png";
          }

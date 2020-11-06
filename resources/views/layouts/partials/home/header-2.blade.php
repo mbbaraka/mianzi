@@ -114,7 +114,7 @@
                                        <div class="dropcart__products-list">
                                           @foreach(Carts::get() as $carts)
                                           <div class="dropcart__product">
-                                             <div class="dropcart__product-image"><a href="{{ url($carts->product->slug.'.html') }}"><img style="width: 70px; height: 70px;" src="{{ asset('storage/product/'.$carts->product->cover) }}" alt="{{$carts->product->title}}"></a>
+                                             <div class="dropcart__product-image"><a href="{{ url($carts->product->slug.'.html') }}"><img style="width: 70px; height: 70px;" src="{{ asset('app/product/'.$carts->product->cover) }}" alt="{{$carts->product->title}}"></a>
                                              </div>
                                              <div class="dropcart__product-info">
                                                 <div class="dropcart__product-name"><a href="{{ url($carts->product->slug.'.html') }}">{{ $carts->product->title }}</a></div>
@@ -160,7 +160,7 @@
                                        <div class="dropcart__products-list">
                                           @foreach(ShoppingCart::all() as $carts)
                                           <div class="dropcart__product">
-                                             <div class="dropcart__product-image"><a href="product.html"><img style="width: 70px; height: 70px;" src="{{ asset('storage/product/'.$carts->cover) }}" alt=""></a></div>
+                                             <div class="dropcart__product-image"><a href="product.html"><img style="width: 70px; height: 70px;" src="{{ asset('app/product/'.$carts->cover) }}" alt=""></a></div>
                                              <div class="dropcart__product-info">
                                                 <div class="dropcart__product-name"><a href="product.html">{{$carts->name}}</a></div>
                                                 <div class="dropcart__product-meta"><span class="dropcart__product-quantity">{{ $carts->qty }}</span> x <span class="dropcart__product-price">{{ config('shop.symbol').' '. number_format($carts->price) }}</span></div>

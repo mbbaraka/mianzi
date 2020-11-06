@@ -40,7 +40,7 @@
                               @foreach($compare as $product)
                               <td>
                                  <a class="compare-table__product-link" href="{{ url($product->product->slug.'.html') }}">
-                                    <div class="compare-table__product-image"><img style="width: 140px; height: 140px;" src="{{ asset('storage/product/'.$product->product->cover) }}" alt="{{$product->product->title}}"></div>
+                                    <div class="compare-table__product-image"><img style="width: 140px; height: 140px;" src="{{ asset('app/product/'.$product->product->cover) }}" alt="{{$product->product->title}}"></div>
                                     <div class="compare-table__product-name">{{ $product->product->title }}</div>
                                  </a>
                               </td>

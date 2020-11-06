@@ -19,8 +19,8 @@
                      <li><a href="{{ url('category/'.$sub_categories->slug. '.html') }}">{{ $sub_categories->title }}</a></li>
                     @endforeach
                   </ul>
-                  <div class="category-card__all"><a href="#">Show All</a></div>
-                  <div class="category-card__products">572 Products</div>
+                  <div class="category-card__all"><a href="{{ url('category/'.$categories->slug. '.html') }}">{{count(Categories::getProducts($categories->id))}} Products</a></div>
+                  {{-- <div class="category-card__products">{{count(Categories::getProducts($categories->id))}} Products</div> --}}
                </div>
             </div>
          </div>
