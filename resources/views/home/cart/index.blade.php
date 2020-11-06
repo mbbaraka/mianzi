@@ -115,7 +115,7 @@
                         <form method="post" action="{{ route('cart.update', $carts->__raw_id) }}">
                         @csrf                                     	
                         <tr class="cart-table__row">
-                           <td class="cart-table__column cart-table__column--image"><a href="#"><img src="{{ asset('storage/product/'. $carts->cover) }}" alt="{{$carts->name }}"></a></td>
+                           <td class="cart-table__column cart-table__column--image"><a href="#"><img src="{{ asset('app/product/'. $carts->cover) }}" alt="{{$carts->name }}"></a></td>
                            <td class="cart-table__column cart-table__column--product">
                               <a href="{{ url($carts->slug.'.html') }}" class="cart-table__product-name">{{ $carts->name }}</a>
                            </td>
