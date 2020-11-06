@@ -111,7 +111,7 @@ class ProductController extends Controller
        if ($request->file('images') > 0) {
           foreach ($request->images as $image) {
                 $curentdate = Carbon::now()->toDateString();
-                $imagenames = $product->subtitle . '-' . uniqid() . '.' . $image->getClientOriginalExtension();
+                $imagenames = $curentdate . '-' . uniqid() . '.' . $image->getClientOriginalExtension();
 
                 $image->move(public_path('app/product/gallery'), $imagenames);
 
