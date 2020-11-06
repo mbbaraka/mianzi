@@ -81,5 +81,5 @@
        </div>
     </div>
  </div>
- @include('home.catalogue.partials.productModal', ['product' => $product, 'attributes' => $attributes])
+ {{-- @include('home.catalogue.partials.productModal', ['product' => $product, 'attributes' => $attributes]) --}}
 @endforeach

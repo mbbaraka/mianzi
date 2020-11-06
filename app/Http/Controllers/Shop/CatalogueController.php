@@ -22,7 +22,7 @@ class CatalogueController extends Controller
         }elseif($sort == "z-a"){
             $products = $category->product()->orderBy('title','desc')->latest()->paginate(24);
         }elseif($sort == "min-max"){
-            $products = $category->product()->orderBy('price','asc')->latest()->paginate(24);
+            $products = $category->product()->orderBy('sale_price','desc')->latest()->paginate(24);
         }else{
             $products = $category->product()->latest()->paginate(24);
         }
@@ -44,13 +44,13 @@ class CatalogueController extends Controller
         }elseif($sort == "z-a"){
             $products = Product::orderBy('title','desc')->latest()->paginate(24);
         }elseif($sort == "min-max"){
-            $products = Product::orderBy('price','asc')->latest()->paginate(24);
+            $products = Product::orderBy('sale_price','desc')->latest()->paginate(24);
         }else{
             $products = Product::latest()->paginate(24);
         }
         
     	$attributes = Attribute::latest()->get();
-        $all_products = Product::get();
+        $all_products = Product::latest()->get();
         $new = Product::latest()->paginate(3);
     	return view('home.catalogue.index', compact('maxPrice', 'products', 'category', 'attributes', 'new', 'all_products'));
     }

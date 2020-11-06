@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -46,7 +46,7 @@
          @yield('content')
          <!-- site__body / end -->
          <!-- site__footer -->
-         @include('home.components.footer')
+         @include('home.components.footer') 
          <!-- site__footer / end -->
       </div>
       <!-- site / end -->

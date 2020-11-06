@@ -1,13 +1,15 @@
-@extends('layouts.app2')
-@section('title')
-   @if (Request::routeIs('shop'))
-      {{$category}}
-      @else 
-      {{$category->title}}
-   @endif
-@endsection
 
-@section('content')
+<?php $__env->startSection('title'); ?>
+   <?php if(Request::routeIs('shop')): ?>
+      <?php echo e($category); ?>
+
+      <?php else: ?> 
+      <?php echo e($category->title); ?>
+
+   <?php endif; ?>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
 <div class="site__body">
    <div class="page-header">
       <div class="page-header__container container">
@@ -15,34 +17,38 @@
             <nav aria-label="breadcrumb">
                <ol class="breadcrumb">
                   <li class="breadcrumb-item">
-                     <a href="{{ url('/') }}">Home</a> 
+                     <a href="<?php echo e(url('/')); ?>">Home</a> 
                      <svg class="breadcrumb-arrow" width="6px" height="9px">
                         <i style="height: 9px; width: 6px;" class="fa fa-angle-right"></i>
                      </svg>
                   </li>
                   <li class="breadcrumb-item">
-                     <a href="{{ route('shop') }}">Products</a> 
+                     <a href="<?php echo e(route('shop')); ?>">Products</a> 
                      <svg class="breadcrumb-arrow" width="6px" height="9px">
                         <i style="height: 9px; width: 6px;" class="fa fa-angle-right"></i>
                      </svg>
                   </li>
                   <li class="breadcrumb-item active" aria-current="page">
-                        @if (Request::routeIs('shop'))
-                        {{$category}}
-                        @else 
-                        {{$category->title}}
-                        @endif
+                        <?php if(Request::routeIs('shop')): ?>
+                        <?php echo e($category); ?>
+
+                        <?php else: ?> 
+                        <?php echo e($category->title); ?>
+
+                        <?php endif; ?>
                   </li>
                </ol>
             </nav>
          </div>
          <div class="page-header__title">
             <h1>
-               @if (Request::routeIs('shop'))
-                  {{$category}}
-                  @else 
-                  {{$category->title}}
-                  @endif
+               <?php if(Request::routeIs('shop')): ?>
+                  <?php echo e($category); ?>
+
+                  <?php else: ?> 
+                  <?php echo e($category->title); ?>
+
+                  <?php endif; ?>
             </h1>
          </div>
       </div>
@@ -52,8 +58,8 @@
          <div class="shop-layout__sidebar">
             <div class="block block-sidebar d-none d-lg-block">
 
-               @include('home.catalogue.filters', ['filters' => $attributes])
-               @include('home.catalogue.partials.latest')
+               <?php echo $__env->make('home.catalogue.filters', ['filters' => $attributes], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+               <?php echo $__env->make('home.catalogue.partials.latest', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
             </div>
          </div>
          <div class="shop-layout__content">
@@ -82,7 +88,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="view-options__legend">Showing {{count($products)}} of {{count($all_products)}} products</div>
+                        <div class="view-options__legend">Showing <?php echo e(count($products)); ?> of <?php echo e(count($all_products)); ?> products</div>
                         <div class="view-options__divider"></div>
                         <div class="float-left ">
                            <button class="btn btn-sm btn-light d-lg-none" data-toggle="modal" data-target="#filter">
@@ -94,32 +100,25 @@
                         <div class="view-options__control">
                            <label for="">Sort By</label>
                            <div>
-                              @include('home.catalogue.partials.sort')
+                              <?php echo $__env->make('home.catalogue.partials.sort', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                            </div>
                         </div>
-                        {{-- <div class="view-options__control">
-                           <label for="">Filter</label>
-                           <div>
-                              <select class="form-control form-control-sm" name="" id="">
-                                 <option value="">12</option>
-                                 <option value="">24</option>
-                              </select>
-                           </div>
-                        </div> --}}
+                        
                      </div>
                   </div>
                   <div class="products-view__list products-list" data-layout="grid-3-sidebar" data-with-features="false">
                      <div class="products-list__body">
-                        @if(count($products) > 0)
-                        @include('home.catalogue.list', ['products' => $products])
-                        @else
+                        <?php if(count($products) > 0): ?>
+                        <?php echo $__env->make('home.catalogue.list', ['products' => $products], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                        <?php else: ?>
                         <span class="text-center text-warning">No Products yet for this category</span>
-                        @endif
+                        <?php endif; ?>
                      </div>
                   </div>
                   <div class="products-view__pagination">
                      <ul class="pagination justify-content-center">
-                        {{ $products->withQueryString()->links()}}
+                        <?php echo e($products->withQueryString()->links()); ?>
+
                      </ul>
                   </div>
                </div>
@@ -128,6 +127,7 @@
       </div>
    </div>
 </div>
-{{-- Filter Model --}}
-@include('home.catalogue.partials.filterModal')
-@endsection
+
+<?php echo $__env->make('home.catalogue.partials.filterModal', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app2', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\mianzi2\resources\views/home/catalogue/index.blade.php ENDPATH**/ ?>

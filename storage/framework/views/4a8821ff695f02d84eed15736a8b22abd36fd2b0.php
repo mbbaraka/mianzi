@@ -1,1 +1,0 @@
-under construction<?php /**PATH C:\xampp\htdocs\mianzi\resources\views/home/pages/about-us.blade.php ENDPATH**/ ?>

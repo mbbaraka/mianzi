@@ -68,7 +68,7 @@ class ProductController extends Controller
                 $imagename =  $curentdate . '-' . uniqid() . '.' . $file->getClientOriginalExtension();
                 
               
-                $file->move(public_path('app\public\product'), $imagename);
+                $file->move(public_path('app/public/product'), $imagename);
          }else{
           $imagename = "default.png";
          }
@@ -113,7 +113,7 @@ class ProductController extends Controller
                 $curentdate = Carbon::now()->toDateString();
                 $imagenames = $product->subtitle . '-' . uniqid() . '.' . $image->getClientOriginalExtension();
 
-                $image->move(public_path('app\public\product\gallery'), $imagenames);
+                $image->move(public_path('app/product/gallery'), $imagenames);
 
                 $product_image = new Productimage();
                 $product_image->product_id = $product->id;
